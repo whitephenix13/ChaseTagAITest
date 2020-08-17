@@ -1,7 +1,7 @@
 #include "pch.h"
 #include <utility>
 #include "CppUnitTest.h"
-#include "../../ChaseTagAI/ChaseTagAI/Astar.h"
+#include "../../../ChaseTagAI/ChaseTagAI/Source/Astar/Astar.h"
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace ChaseTagAiTest
@@ -14,7 +14,7 @@ namespace ChaseTagAiTest
 		{
 			std::pair<int, int> startIndex(0,0);
 			std::pair<int, int> targetIndex(4,0);
-			std::function<float(std::pair<int, int>&)> h;
+			std::function<float(const std::pair<int, int>&, const std::pair<int, int>&)> h;
 			std::pair<int, int> boardSize(5, 2);
 			// 0 0 0 0 0 
 			// 0 0 0 0 0
@@ -26,6 +26,10 @@ namespace ChaseTagAiTest
 			//bool pathFound =true;
 			//float dist = distance(std::make_pair(0, 0), std::make_pair(0, 1));
 			Assert::IsTrue(pathFound);
+		}
+	private: 
+		float defaultHeuristic(std::pair<int, int>& currentPos) {
+			return 0;
 		}
 	};
 }
