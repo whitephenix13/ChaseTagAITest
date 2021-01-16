@@ -20,10 +20,13 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\ChaseTagAITest.cpp">
+    <ClCompile Include="Source\pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\pch.cpp">
+    <ClCompile Include="Source\AstarTest\AstarTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\StrategyTest\FleePathFindingTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
